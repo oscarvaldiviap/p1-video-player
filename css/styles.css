@@ -1,0 +1,64 @@
+@import './buttons.css';
+
+body {
+  background-color: #1f1f1f;
+  font-family: Lato;
+}
+
+.section {
+  align-items: center;
+  display: flex;
+  inset-block: 0;
+  inset-inline: 20px;
+  justify-content: center;
+  margin: auto;
+  max-inline-size: 900px;
+  position: absolute;
+}
+
+.vPlayer {
+  position: relative;
+}
+
+.vPlayer video {
+  aspect-ratio: 16/9;
+  inline-size: 100%;
+  object-fit: cover;
+}
+
+.vpObjects {
+  opacity: 0;
+  transition: .3s opacity;
+}
+
+.vPlayer:hover .vpObjects {
+  opacity: 1;
+}
+
+.vpoTitle {
+  color: #fff;
+  font-size: 1.2em;
+  inset-block-start: 0;
+  inset-inline-start: 25px;
+  position: absolute;
+}
+
+.vpoControls {
+  align-items: center;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: absolute;
+}
+
+.vpoProgress {
+  display: flex;
+  inset-block-end: 0;
+  inset-inline: 0;
+  padding: 20px;
+  position: absolute;
+}
+
+.vpoProgress input {
+  flex: 1;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Video Player</title>
+</head>
+<body>
+  <div class="section">
+    <div class="vPlayer">
+      <video id="video" src="./vid/lofi.mp4" poster="./img/poster.jpg"></video>
+      <div class="vpObjects">
+        <h2 class="vpoTitle">Developer Music</h2>
+        <div class="vpoControls">
+          <button class="button backward"></button>
+          <button class="button play"></button>
+          <button hidden class="button pause"></button>
+          <button class="button forward"></button>
+        </div>
+        <div class="vpoProgress">
+          <input class="range" type="range" value="0">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/scripts.js"></script>
+</body>
+</html>
