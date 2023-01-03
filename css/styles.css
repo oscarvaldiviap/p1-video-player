@@ -37,10 +37,11 @@ body {
 
 .vpoTitle {
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1.1em;
   inset-block-start: 0;
   inset-inline-start: 25px;
   position: absolute;
+  text-transform: capitalize;
 }
 
 .vpoControls {
@@ -54,9 +55,21 @@ body {
 .vpoProgress {
   display: flex;
   inset-block-end: 0;
-  inset-inline: 0;
+  inset-inline: 20px;
   padding: 20px;
   position: absolute;
+}
+
+.time {
+  color: #fff;
+}
+
+.timeElapsed {
+  padding-right: 10px;
+}
+
+.timeRemaining {
+  padding-left: 10px;
 }
 
 .vpoProgress input {
