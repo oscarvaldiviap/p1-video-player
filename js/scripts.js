@@ -6,6 +6,8 @@ const $pause = document.querySelector('.pause');
 const $backward = document.querySelector('.backward');
 const $forward = document.querySelector('.forward');
 const $progress = document.querySelector('.range');
+const $elapsed = document.querySelector('.timeElapsed');
+const $remaining = document.querySelector('.timeRemaining');
 
 /* EVENTS */
 
@@ -43,8 +45,26 @@ function progressVideo() {
     $progress.max = $video.duration;
 }
 
+function timeE(mSeconds) {
+    let ms = new Date(mSeconds * 1000);
+    let seconds = (ms.getSeconds() <= 9) ? "0" + ms.getSeconds() : ms.getSeconds();
+    let minutes = (ms.getMinutes() <= 9) ? "0" + ms.getMinutes() : ms.getMinutes();
+
+    return minutes + ":" + seconds;
+}
+
+function timeR(mSeconds) {
+    let ms = new Date(mSeconds * 1000);
+    let seconds = (ms.getSeconds() <= 9) ? "0" + ms.getSeconds() : ms.getSeconds();
+    let minutes = (ms.getMinutes() <= 9) ? "0" + ms.getMinutes() : ms.getMinutes();
+
+    return "-" + minutes + ":" + seconds;
+}
+
 function progressTimeUpdate() {
     $progress.value = $video.currentTime;
+    $elapsed.innerHTML = timeE($video.currentTime);
+    $remaining.innerHTML = timeR($video.duration - $video.currentTime);
 }
 
 function progressInput() {
